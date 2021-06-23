@@ -1,0 +1,8 @@
+---
+- name: Add a new tenant
+  cisco.aci.aci_tenant:
+    host: "{{ ansible_host }}"
+    username: "{{ apic_user }}"
+    password: "{{ apic_password }}"
+    tenant: "{{ tenants.new_tenant }}"
+    state: present

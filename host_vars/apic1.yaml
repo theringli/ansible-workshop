@@ -1,0 +1,5 @@
+--- 
+apic_user: admin
+apic_password: ciscopsdt
+ansible_connection: local
+ansible_host: sandboxapicdc.cisco.com

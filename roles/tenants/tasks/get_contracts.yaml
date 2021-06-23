@@ -1,0 +1,14 @@
+---
+- name: Getting the contracts of tenants
+  cisco.aci.aci_contract:
+    host: "{{ ansible_host }}"
+    username: "{{ apic_user }}"
+    password: "{{ apic_password }}"
+    tenant: "{{ tenants.query_tenant }}"
+    state: query
+  register: query_result
+
+- name: Printing contracts of SnV
+  debug:
+    var: query_result | community.general.json_query('current[*].fvTenant.children[*].vzBrCP.attributes.name')
+

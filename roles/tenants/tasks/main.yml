@@ -1,0 +1,5 @@
+---
+# tasks file for tenants
+
+ # - import_tasks: create_tenant.yaml
+  - import_tasks: get_contracts.yaml

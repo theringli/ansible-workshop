@@ -1,0 +1,5 @@
+---
+# vars file for tenants
+tenants: 
+  new_tenant: demo-tenant-jr
+  query_tenant: SnV

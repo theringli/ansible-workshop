@@ -1,0 +1,15 @@
+---
+- name: Configuring the Cisco APIC
+  hosts: apic1
+#  gather_facts: no
+
+  pre_tasks:
+    - debug:
+        msg: 'Beginning configuration of tenants'
+
+  roles:
+    - tenants
+
+  post_tasks:
+    - debug:
+        msg: 'Tenants have been configured'
